@@ -1,6 +1,7 @@
 #Stackmob JS SDK for NodeJS
 
-Example: 
+Example:
+
   StackMob = require("stackmob-nodejs")
 
   StackMob.init({
