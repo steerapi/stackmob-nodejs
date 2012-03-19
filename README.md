@@ -1,5 +1,6 @@
 #Stackmob JS SDK for NodeJS
 
+See [http://www.stackmob.com/devcenter/docs/JS-SDK-Tutorial](http://www.stackmob.com/devcenter/docs/JS-SDK-Tutorial)
 Example:
 
     StackMob = require("stackmob-nodejs")
