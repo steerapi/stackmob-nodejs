@@ -1,0 +1,13 @@
+{
+  "name": "stackmob-nodejs",
+  "description": "Stackmob JS SDK for NodeJS",
+  "version": "0.1.0",
+  "author": "Surat Teerapittayanon <steerapi@gmail.com>",
+  "engines": { "node": "*" },
+  "main": "./stackmob-js-0.1.0.js",
+  "dependencies": {
+    "backbone": "*",
+    "underscore": "*",
+    "xmlhttprequest": "*"
+  }
+}
