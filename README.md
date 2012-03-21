@@ -3,6 +3,7 @@
 See [http://www.stackmob.com/devcenter/docs/JS-SDK-Tutorial](http://www.stackmob.com/devcenter/docs/JS-SDK-Tutorial)
 
 Install:
+    
     npm install stackmob-nodejs
     
 Example:
