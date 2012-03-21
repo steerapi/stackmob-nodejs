@@ -290,12 +290,17 @@ Backbone = require("backbone");
       function _makeOAuthAjaxCall(model, params) {
         var success = params['success'];
 
-        var defaultSuccess = function(response, options) {
+        var defaultSuccess = function(response) {
           if (response.text) {
             var result = JSON.parse(response.text);
-            model.clear();
-            if (!model.set(result)) return false;
-            success(model);
+            // CHANGE
+            if(model.clear){
+              model.clear();
+              if (!model.set(result)) return false;
+              success(model);              
+            }else{
+              success(result);              
+            }
           }
           else success();
 
@@ -305,7 +310,7 @@ Backbone = require("backbone");
 
         var error = params['error'];
 
-        var defaultError = function(response, request) {
+        var defaultError = function(response) {
           var result = response.text ? JSON.parse(response.text) : response;
           (function(m, d) { error(d); }).call(StackMob, model, result);
         }
@@ -315,10 +320,14 @@ Backbone = require("backbone");
         var hash = {};
         hash['url'] = params['url'];
         hash['headers'] = params['headers'];
-        hash['params'] = params['data'];
         hash['success'] = params['success'];
         hash['failure'] = params['error'];
         hash['method'] = params['type'];
+        hash['data'] = params['data'];
+        // CHANGE
+        if (hash['method'] === "PUT" || hash['method'] === "POST") {
+          hash['headers']["Content-Type"] = "application/json"
+        }
         
         return jsOAuth.request(hash);
       }
