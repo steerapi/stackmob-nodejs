@@ -1,4 +1,4 @@
-//Change to suppoer nodejs
+//Change to support nodejs
 _ = require("underscore");
 Backbone = require("backbone");
 
