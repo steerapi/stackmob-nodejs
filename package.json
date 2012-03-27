@@ -9,5 +9,9 @@
     "backbone": "*",
     "underscore": "*",
     "xmlhttprequest": "*"
+  },
+  "repository":   {
+    "type": "git",
+    "url": "git://github.com/Wisdom/stackmob-nodejs.git"
   }
 }
