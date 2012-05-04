@@ -9,7 +9,7 @@ Backbone = require("backbone");
    * StackMob Object
    * This holds configuration information for StackMob
    */
-   //Change to suppoer nodejs
+   //Change to support nodejs
   module.exports = StackMob = root.StackMob = {
     DEFAULT_API_VERSION: 0,
 
@@ -89,7 +89,7 @@ Backbone = require("backbone");
 
       this.initEnd(options); //placeholder for any actions a developer may want to implement via _extend
       
-      //Change to suppoer nodejs
+      //Change to support nodejs
       jsOAuth = require("./jsOAuth-1.3.3").OAuth(options);
       
       return this;
@@ -293,7 +293,7 @@ Backbone = require("backbone");
         var defaultSuccess = function(response) {
           if (response.text) {
             var result = JSON.parse(response.text);
-            // CHANGE
+            //Change to support nodejs
             if(model.clear){
               model.clear();
               if (!model.set(result)) return false;
@@ -324,7 +324,7 @@ Backbone = require("backbone");
         hash['failure'] = params['error'];
         hash['method'] = params['type'];
         hash['data'] = params['data'];
-        // CHANGE
+        //Change to support nodejs
         if (hash['method'] === "PUT" || hash['method'] === "POST") {
           hash['headers']["Content-Type"] = "application/json"
         }

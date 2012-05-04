@@ -4,11 +4,12 @@
   "version": "0.1.0",
   "author": "Surat Teerapittayanon <steerapi@gmail.com>",
   "engines": { "node": "*" },
-  "main": "./stackmob-js-0.1.0.js",
+  "main": "./main.js",
   "dependencies": {
     "backbone": "*",
-    "underscore": "*",
-    "xmlhttprequest": "*"
+    "lodash": "*",
+    "xmlhttprequest": "*",
+    "localStorage": "*"
   },
   "repository":   {
     "type": "git",
